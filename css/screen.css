@@ -8,19 +8,33 @@
 
 :root {
     /* colors */
-    --color-alpha-light: MEDIUMSLATEBLUE;
-    --color-alpha: SLATEBLUE;
+    /* --color-alpha-light: MEDIUMSLATEBLUE; */
+    --color-alpha-light: #F2F2F9;
+    --color-alpha: #A3A0FB;
+    --color-alpha-dark: #4C4B68;
+    --color-alpha-10-dark: #43435D;
+    --color-alpha-20-dark: #4D4F5C;
 
-    --color-neutral-light: LIGHTSLATEGRAY;
-    --color-neutral: SLATEGRAY;
-    --color-neutral-dark: DARKSLATEGRAY;
+
+    --color-beta: #3B86FF;
+
+    --color-gamma: #FF6565;
+
+    --color-neutral-light: #fff;
+    /* --color-neutral: SLATEGRAY; */
+    --color-neutral-dark: #43425D;
 
     /* Shadows */
-
+    --shadow-neutral: 0 2px 6px rgba(0, 0, 0, .04)
     /* border radius */
 
     /* transitions */
     --transition-alpha: .1s;
+
+    /* grid  */
+    --grid-sidebar-width: 260px;
+    --grid-baseline:5px;
+
 }
 
 /*------------------------------------*\
@@ -34,14 +48,14 @@
 */
 
 html {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.5;
-    font-family: Helvetica, arial, sans-serif;
-    color: var(--color-neutral-dark);
+    font-family: 'Source Sans Pro', arial, sans-serif;
+    color: var(--color-alpha-20-dark);
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: white;
+    background-color: var(--color-alpha-light);
 }
 
 *,
@@ -288,12 +302,54 @@ input::placeholder {
 /*------------------------------------*\
 #COMPONENTS
 \*------------------------------------*/
+/*
+    Component: app
+    ---
+    Website main app
+*/
+.c-app {
+    min-height: 100vh;
+}
+.c-app__logo {
+    background: var(--color-alpha-10-dark);
+}
+.c-app__topbar {
+    background: var(--color-neutral-light);
+    box-shadow: var(--shadow-neutral);
+}
+.c-app__sidebar {
+    background: var(--color-alpha-dark);
+}
+.c-app__main {
+}
+/* Standard width */
+@media screen and (min-width:65rem) {
+    .c-app {
+        /* alle itemms in deze container worden gestyled */
+        display: grid; 
+        grid-template-columns: var(--grid-sidebar-width) auto;
+        grid-template-rows: auto 1fr ; /*auto kijkt naar content*/
+
+    }
+}
 
 /*
     Component: Logo
     ---
     Website main logo
 */
+.c-logo {
+    margin: 0;
+    padding: calc(var(--grid-baseline) * 5) 0 calc(var(--grid-baseline) * 5) calc(var(--grid-baseline) * 4);
+
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--color-neutral-light);
+    line-height: 20px;
+    letter-spacing: 2px;
+
+}
+
 
 /*------------------------------------*\
 #UTILITIES
