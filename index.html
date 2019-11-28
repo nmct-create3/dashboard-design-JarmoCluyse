@@ -5,94 +5,247 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Impekable</title>
         <meta name="description" content="This is my HTML5 boilerplate.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/screen.css">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900&display=swap" rel="stylesheet">
         <script defer src="./js/svgxuse.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
     </head>
     <body>
 
         <div class="c-app">
             <div class="c-app__logo">
-                <h1 class=>
+                <h1 class="c-logo">
 
                     IMPEKABLE
                 </h1>
             </div>
             <header class="c-app__topbar">
-                Topbar                
+                     searchbar        
             </header>
             <aside class="c-app__sidebar">
-                <nav>
-                    <ul>
-                        <li>
-                            <svg class="icon c-icon_home">
-                                <use xlink:href="img/icons/symbol-defs.svg#c-icon_home"></use>
-                            </svg>
-                            <a href="#">Home</a>
+                <nav class="c-main-menu">
+                    <ul class="c-main-menu__list">
+                        <li class="c-main-menu__item">
+                            <a class="c-main-menu__link" href="#">
+                                <svg class="c-main-menu__symbol">
+                                    <use xlink:href="img/icons/symbol-defs.svg#c-icon_home"></use>
+                                </svg>
+                                
+                                Home
+                            </a>
                         </li>
-                        <li>
-                            <svg class="icon c-icon_dashboard">
-                                <use xlink:href="img/icons/symbol-defs.svg#c-icon_dashboard"></use>
-                            </svg>
-                            <a href="#">Dashboard</a>
+                        <li class="c-main-menu__item">
+                            <a class="c-main-menu__link" href="#">
+                                <svg class="c-main-menu__symbol">
+                                    <use xlink:href="img/icons/symbol-defs.svg#c-icon_dashboard"></use>
+                                </svg>
+                                
+                                Dashboard
+                            </a>
                         </li>
-                        <li>
-                            <svg class="icon c-icon_inbox">
-                                <use xlink:href="img/icons/symbol-defs.svg#c-icon_inbox"></use>
-                            </svg>
-                            <a href="#">Inbox</a>
+                        <li class="c-main-menu__item">
+                            <a class="c-main-menu__link" href="#">
+                                <svg class="c-main-menu__symbol">
+                                    <use xlink:href="img/icons/symbol-defs.svg#c-icon_inbox"></use>
+                                </svg>
+                                
+                                Inbox
+                            </a>
+                        </li> 
+                        <li class="c-main-menu__item">
+                            <a class="c-main-menu__link" href="#">
+                                <svg class="c-main-menu__symbol">
+                                    <use xlink:href="img/icons/symbol-defs.svg#c-icon_products"></use>
+                                </svg>
+                                
+                                Products
+                            </a>
                         </li>
-                        <li>
-                            <svg class="icon c-icon_products">
-                                <use xlink:href="img/icons/symbol-defs.svg#c-icon_products"></use>
-                            </svg>
-                            <a href="#">Products</a>
+                        <li class="c-main-menu__item">
+                            <a class="c-main-menu__link" href="#">
+                                <svg class="c-main-menu__symbol">
+                                    <use xlink:href="img/icons/symbol-defs.svg#c-icon_Invoices"></use>
+                                </svg>
+                                
+                                Invoices
+                            </a>
                         </li>
-                        <li>
-                            <svg class="icon c-icon_Invoices">
-                                <use xlink:href="img/icons/symbol-defs.svg#c-icon_Invoices"></use>
-                            </svg>
-                            <a href="#">Invoices</a>
+                        <li class="c-main-menu__item">
+                            <a class="c-main-menu__link" href="#">
+                                <svg class="c-main-menu__symbol">
+                                    <use xlink:href="img/icons/symbol-defs.svg#c-icon_customers"></use>
+                                </svg>
+                                
+                                Customers
+                            </a>
                         </li>
-                        <li>
-                            <svg class="icon c-icon_customers">
-                                <use xlink:href="img/icons/symbol-defs.svg#c-icon_customers"></use>
-                            </svg>
-                            <a href="#">Customers</a>
+                        <li class="c-main-menu__item">
+                            <a class="c-main-menu__link" href="#">
+                                <svg class="c-main-menu__symbol">
+                                    <use xlink:href="img/icons/symbol-defs.svg#c-icon_chat_room"></use>
+                                </svg>
+                                
+                                Chat Room
+                            </a>
                         </li>
-                        <li>
-                            <svg class="icon c-chat-room">
-                                <use xlink:href="img/icons/symbol-defs.svg#c-chat-room"></use>
-                            </svg>
-                            <a href="#">Chat Room</a>
+                        <li class="c-main-menu__item">
+                            <a class="c-main-menu__link" href="#">
+                                <svg class="c-main-menu__symbol">
+                                    <use xlink:href="img/icons/symbol-defs.svg#c-icon_calendar"></use>
+                                </svg>
+                                
+                                Calendar
+                            </a>
                         </li>
-                        <li>
-                            <svg class="icon c-icon_calendar">
-                                <use xlink:href="img/icons/symbol-defs.svg#c-icon_calendar"></use>
-                            </svg>
-                            <a href="#">Calendar</a>
+                        <li class="c-main-menu__item">
+                            <a class="c-main-menu__link" href="#">
+                                <svg class="c-main-menu__symbol">
+                                    <use xlink:href="img/icons/symbol-defs.svg#c-icon_help_center"></use>
+                                </svg>
+                                
+                                Help Center
+                            </a>
                         </li>
-                        <li>
-                            <svg class="icon c-help-center">
-                                <use xlink:href="img/icons/symbol-defs.svg#c-help-center"></use>
-                            </svg>
-                            <a href="#">Help Center</a>
-                        </li>
-                        <li>
-                            <svg class="icon c-icon_setting">
-                                <use xlink:href="img/icons/symbol-defs.svg#c-icon_setting"></use>
-                            </svg>
-                            <a href="#">Settings</a>
+                        <li class="c-main-menu__item">
+                            <a class="c-main-menu__link" href="#">
+                                <svg class="c-main-menu__symbol">
+                                    <use xlink:href="img/icons/symbol-defs.svg#c-icon_setting"></use>
+                                </svg>
+                                
+                                Settings
+                            </a>
                         </li>
                     </ul>
                 </nav>
             </aside>
             <main class="c-app__main">
-                <h2>
-                    Overview
-                </h2>
+                <div class="o-row">
+                    <div class="o-container">
+                        <h2>
+                            Overview
+                        </h2>
+                        <div class="c-dashboard">
+                            <div class="c-dashboard__item">
+                                <div class="c-card">
+                                    <div class="c-card__header">
+                                        <h1 class="c-card__title">
+                                            Bezoekers per dag
+                                        </h1>
+                                        <span class="c-custom-select">
+                                            <select class="c-input c-custom-select__input" class="" name="select1" id="select1">
+                                                <option value="Maandag">Maandag</option>
+                                                <option value="Dinsdag">Dinsdag</option>
+                                                <option value="Woensdag">Woensdag</option>
+                                                <option value="Donderdag">Donderdag</option>
+                                                <option value="Vrijdag">Vrijdag</option>
+                                                <option value="Zaterdag">Zaterdag</option>
+                                                <option value="Zondag">Zondag</option>
+                                            </select>
+
+                                            <svg class="c-custom-select__symbol" id="small-down" xmlns="http://www.w3.org/2000/svg" width="11" height="7" viewBox="0 0 11 7">
+                                                <path id="Path_26" data-name="Path 26" d="M8.1,11.6,2.6,6.041,4.026,4.6,8.1,8.718,12.174,4.6,13.6,6.041Z" transform="translate(-2.6 -4.6)" fill="#a4afb7"/>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <div class="c-card__body">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="c-dashboard__item u-span-column-6">
+                                <div class="c-card">
+                                    <div class="c-card__header">
+
+                                    </div>
+                                    <div class="c-card__body">
+
+                                    </div>
+                                </div>
+                                Grid item 2
+                            </div>
+                            <div class="c-dashboard__item u-span-column-6">
+                                <div class="c-card">
+                                    <div class="c-card__header">
+
+                                    </div>
+                                    <div class="c-card__body">
+
+                                    </div>
+                                </div>
+                                Grid item 3
+                            </div>
+                            <div class="c-dashboard__item u-span-row-2 u-span-column-4">
+                                <div class="c-card">
+                                    <div class="c-card__header">
+
+                                    </div>
+                                    <div class="c-card__body">
+
+                                    </div>
+                                </div>
+                                Grid item 4
+                            </div>
+                            <div class="c-dashboard__item u-span-column-8">
+                                <div class="c-card">
+                                    <div class="c-card__header">
+
+                                    </div>
+                                    <div class="c-card__body">
+
+                                    </div>
+                                </div>
+                                Grid item 5
+                            </div>
+                            <div class="c-dashboard__item u-span-column-4">
+                                <div class="c-card">
+                                    <div class="c-card__header">
+
+                                    </div>
+                                    <div class="c-card__body">
+
+                                    </div>
+                                </div>
+                                Grid item 6
+                            </div>
+                            <div class="c-dashboard__item u-span-column-4">
+                                <div class="c-card">
+                                    <div class="c-card__header">
+
+                                    </div>
+                                    <div class="c-card__body">
+
+                                    </div>
+                                </div>
+                                Grid item 7
+                            </div>
+                            <div class="c-dashboard__item u-span-column-4">
+                                <div class="c-card">
+                                    <div class="c-card__header">
+
+                                    </div>
+                                    <div class="c-card__body">
+
+                                    </div>
+                                </div>
+                                Grid item 
+                            </div>
+                            <div class="c-dashboard__item u-span-column-8">
+                                <div class="c-card">
+                                    <div class="c-card__header">
+
+                                    </div>
+                                    <div class="c-card__body">
+
+                                    </div>
+                                </div>
+                                Grid item 9
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
             </main>
         </div>
     </body>
