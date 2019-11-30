@@ -10,8 +10,10 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/screen.css">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900&display=swap" rel="stylesheet">
+         <!-- defer altijd beter eerst dom parsen  eerst content tonen dan pas javastript laden domcontent loaded niet meer nodig -->
         <script defer src="./js/svgxuse.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+        <script defer src="./js/app.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
     </head>
     <body>
 
@@ -135,7 +137,7 @@
                                             Bezoekers per dag
                                         </h1>
                                         <span class="c-custom-select">
-                                            <select class="c-input c-custom-select__input" class="" name="select1" id="select1">
+                                            <select class="c-input c-custom-select__input js-daySelect" class="" name="select1" id="select1">
                                                 <option value="Maandag">Maandag</option>
                                                 <option value="Dinsdag">Dinsdag</option>
                                                 <option value="Woensdag">Woensdag</option>
@@ -151,7 +153,9 @@
                                         </span>
                                     </div>
                                     <div class="c-card__body">
+                                        <canvas class="js-graph" width="3" height="1">
 
+                                        </canvas>
                                     </div>
                                 </div>
                             </div>
@@ -180,13 +184,17 @@
                             <div class="c-dashboard__item u-span-row-2 u-span-column-4">
                                 <div class="c-card">
                                     <div class="c-card__header">
-
+                                        <h1 class="c-card__title">
+                                            money
+                                        </h1>
                                     </div>
                                     <div class="c-card__body">
-
+                                        <svg viewbox="0 0 100 100">
+                                            <circle class="c-circle c-circle__main" ></circle>
+                                            <circle class="c-circle c-circle__option"></circle>
+                                        </svg>
                                     </div>
                                 </div>
-                                Grid item 4
                             </div>
                             <div class="c-dashboard__item u-span-column-8">
                                 <div class="c-card">
@@ -230,7 +238,7 @@
 
                                     </div>
                                 </div>
-                                Grid item 
+                                Grid item 8
                             </div>
                             <div class="c-dashboard__item u-span-column-8">
                                 <div class="c-card">

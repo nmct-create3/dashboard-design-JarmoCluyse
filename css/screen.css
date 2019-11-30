@@ -478,6 +478,10 @@ padding-left: 0;
     padding: 8px 51px 8px 12px;
 	box-shadow: var(--shadow-neutral);
 }
+.circle {
+    width: 10px;
+    
+}
 
 
 /*------------------------------------*\
